@@ -1,0 +1,213 @@
+﻿/* Move down content because we have a fixed navbar that is 50px tall */
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Wrapping element */
+/* Set some basic padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set widths on the form inputs since otherwise they're 100% wide */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.search{
+    max-width:100% !important;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+    .jumbotron {
+        margin-top: 20px;
+    }
+
+    .body-content {
+        padding: 0;
+    }
+}
+
+.tags {
+   margin-bottom: 5px;
+} 
+
+.tags .tag {
+   display: inline-block;
+   margin-right: 5px;
+   font-size: 13px;
+}
+  
+.tag .close {
+   font-size: 14px;
+   margin-left: 5px;
+}
+
+.scroll {
+    min-height: 400px;
+    overflow: auto;
+}
+
+.truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+}
+
+/****************************  Toggle switches  **************************************************************************************************************/
+input.cmn-toggle-round + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px; }
+
+input.cmn-toggle-round + label:before,
+input.cmn-toggle-round + label:after {
+  display: block;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  bottom: 1px;
+  content: ""; }
+
+input.cmn-toggle-round + label:before {
+  right: 1px;
+  background-color: #f1f1f1;
+  border-radius: 60px;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s; }
+
+input.cmn-toggle-round + label:after {
+  width: 58px;
+  background-color: #fff;
+  border-radius: 100%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  -moz-transition: margin 0.4s;
+  -o-transition: margin 0.4s;
+  -webkit-transition: margin 0.4s;
+  transition: margin 0.4s; }
+
+input.cmn-toggle-round:checked + label:before {
+  background-color: #8ce196; }
+
+input.cmn-toggle-round:checked + label:after {
+  margin-left: 60px; }
+
+input.cmn-toggle-round-flat + label {
+  padding: 2px;
+  width: 120px;
+  height: 60px;
+  background-color: #dddddd;
+  border-radius: 60px;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s; }
+
+input.cmn-toggle-round-flat + label:before,
+input.cmn-toggle-round-flat + label:after {
+  display: block;
+  position: absolute;
+  content: ""; }
+
+input.cmn-toggle-round-flat + label:before {
+  top: 2px;
+  left: 2px;
+  bottom: 2px;
+  right: 2px;
+  background-color: #fff;
+  border-radius: 60px;
+  -moz-transition: background 0.4s;
+  -o-transition: background 0.4s;
+  -webkit-transition: background 0.4s;
+  transition: background 0.4s; }
+
+input.cmn-toggle-round-flat + label:after {
+  top: 4px;
+  left: 4px;
+  bottom: 4px;
+  width: 52px;
+  background-color: #dddddd;
+  border-radius: 52px;
+  -moz-transition: margin 0.4s, background 0.4s;
+  -o-transition: margin 0.4s, background 0.4s;
+  -webkit-transition: margin 0.4s, background 0.4s;
+  transition: margin 0.4s, background 0.4s; }
+
+input.cmn-toggle-round-flat:checked + label {
+  background-color: #8ce196; }
+
+input.cmn-toggle-round-flat:checked + label:after {
+  margin-left: 60px;
+  background-color: #8ce196; }
+
+input.cmn-toggle-yes-no + label {
+  padding: 2px;
+  width: 100px;
+  height: 30px;
+  border-color: #fff; }
+
+input.cmn-toggle-yes-no + label:before,
+input.cmn-toggle-yes-no + label:after {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
+  font-size: 20px;
+  text-align: center;
+  line-height: 40px; }
+
+input.cmn-toggle-yes-no + label:before {
+  background-color: #e8eaef;
+  color: #444;
+  content: attr(data-off);
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+input.cmn-toggle-yes-no + label:after {
+  background-color: #36c6d3;
+  content: attr(data-on);
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  transition: transform 0.5s;
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden; }
+
+input.cmn-toggle-yes-no:checked + label:before {
+  -moz-transform: rotateY(180deg);
+  -ms-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg); }
+
+input.cmn-toggle-yes-no:checked + label:after {
+  -moz-transform: rotateY(0);
+  -ms-transform: rotateY(0);
+  -o-transform: rotateY(0);
+  -webkit-transform: rotateY(0);
+  transform: rotateY(0); }

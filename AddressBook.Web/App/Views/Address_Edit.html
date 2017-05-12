@@ -1,0 +1,80 @@
+﻿<h2>Contact Record</h2>
+<form name="theForm">
+    <div class="form-horizontal">
+        <ul id="validationSummary" class="ui-state-error has-error alert alert-error">
+            <li ng-repeat="error in errors track by error" class="ui-state-error-text has-error ">{{error}}</li>
+        </ul>
+        <div class="form-group">
+            <label for="Surname" class="control-label col-md-2"> Surname </label>
+            <div class="col-md-10">
+                <input type="text" disabled="disabled" ng-model="data.Surname" id="Surname" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="PhoneIntlDialCode" class="control-label col-md-2"> Phone Intl. Dial Code</label>
+            <div class="col-md-10">
+                <input type="number" ng-model="data.PhoneIntlDialCode" id="PhoneIntlDialCode" class="form-control" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="PhoneNumber" class="control-label col-md-2"> PhoneNumber </label>
+            <div class="col-md-10">
+                <input type="text" ng-model="data.PhoneNumber" id="PhoneNumber" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="EmailAddress" class="control-label col-md-2"> EmailAddress </label>
+            <div class="col-md-10">
+                <input type="text" ng-model="data.EmailAddress" id="EmailAddress" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="TwitterId" class="control-label col-md-2"> Customer Reference </label>
+            <div class="col-md-10">
+                <input type="text" ng-model="data.TwitterId" id="TwitterId" class="form-control" />
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="IsFavourite" class="control-label col-md-2"> Favourite? </label>
+            <div class="col-md-1">
+                <input type="checkbox" name="IsFavourite" id="IsFavourite"  class="form-control cmn-toggle cmn-toggle-yes-no" style="display:none;">
+                <label for="IsFavourite" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Gender" class="control-label col-md-2"> Gender </label>
+            <div class="col-md-1">
+                <input type="checkbox" id="Gender" class="form-control cmn-toggle cmn-toggle-yes-no" style="display:none;">
+                <label for="Gender" data-on="Female" data-off="Male"></label>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="Group" class="control-label col-md-2"> Group </label>
+            <div class="col-md-1">
+                <input type="checkbox"id="Group" class="form-control cmn-toggle cmn-toggle-yes-no" style="display:none;">
+                <label for="Group" data-on="Work" data-off="Personal"></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="IsRecent" class="control-label col-md-2"> Recent? </label>
+            <div class="col-md-1">
+                <input type="checkbox" name="IsRecent" id="IsRecent" class="form-control cmn-toggle cmn-toggle-yes-no" style="display:none;">
+                <label for="IsRecent" data-on="Yes" data-off="No"></label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="button" value="Save" class="btn btn-default" ng-click="save()" />
+            </div>
+        </div>
+    </div>
+</form>
+
+<div>
+    <a href="#/Address">Back to List</a>
+</div>
